@@ -28,9 +28,9 @@ const linkItems = [
   }
 ]
 
-defineProps<{
-  msg: string;
-}>();
+// defineProps<{
+//   msg: string;
+// }>();
 
 const route = useRoute();
 
@@ -161,25 +161,22 @@ const Icon = defineComponent({
   margin: 0 24px;
   align-self: stretch;
   background-color: var(--color-white);
+  color: var(--color-text);
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-bold);
 }
 
 .item-title {
-  margin-left: 5px;
-  color: var(--color-gray-800);
-  font-size: var(--font-size-normal);
-  font-weight: var(--font-weight-bold);
+  margin-left: 8px;
+  color: var(--color-black);
 }
 
 .item-border {
   position: absolute;
   bottom: -1px;
+  left: 0;
+  right: 0;
   height: 1px;
-  width: 100%;
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  --rgb-string: 21, 173, 193;
-  opacity: 1;
 }
 
 .app-setting-wrapper {
