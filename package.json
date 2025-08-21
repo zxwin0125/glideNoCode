@@ -4,9 +4,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "dev": "pnpm dev:builder",
     "dev:builder": "pnpm --filter builder run dev",
     "lint:vue": "eslint --fix",
     "lint:style": "stylelint \"{packages,apps}/**/*.{css,scss,vue}\"",
+    "lint": "pnpm run lint:vue && pnpm run lint:style",
     "spellcheck": "cspell lint --dot --gitignore --color --cache --showSuggestions \"{packages,apps}/**/*.@(html|js|cjs|mjs|ts|tsx|css|scss|md|vue)\"",
     "commit": "git-cz",
     "prepare": "husky"
